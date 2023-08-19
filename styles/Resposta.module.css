@@ -1,0 +1,86 @@
+.resposta {
+    display: flex;
+    height: 100px;
+    margin: 10px;
+    align-self: stretch;
+    min-width: 500px;
+perspective: 1000px;
+
+}
+
+
+.conteudoResposta {
+    display: flex;
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: normal;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.conteudoResposta.revelada {
+    transform:rotateY(180deg) ;
+}
+
+.frente,
+.verso {
+    display: flex;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.verso{
+    transform:rotateY(180deg) ;
+    
+}
+.frente {
+    align-items: center;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #2a2a2a;
+    padding: 15px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.frente:hover{
+    transform: scale(1.1);
+}
+.verso > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 12px;
+}
+.certa{
+    background-color:#2BAA6D;
+
+}
+.errada{
+    background-color:#E44A4E;
+}
+.certa.valor .errada.valor{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.letra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.valor {
+    font-weight: 700;
+}
+

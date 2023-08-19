@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --font:#fff;
+  --background-start: #242424;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -16,12 +16,14 @@
   }
 }
 
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ background:var(--background-start);
+ color:var(--font);
+
+}
+
+*{
+  box-sizing: border-box;
+  
 }
