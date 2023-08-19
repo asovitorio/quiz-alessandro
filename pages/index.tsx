@@ -4,7 +4,7 @@ import QuestaoModel from '@/models/questao'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-const BASE_URL = 'http://localhost:3000/api'
+const BASE_URL = 'https://quiz-alessandro-asovitorio.vercel.app/'
 
 export default function Home() {
   const router = useRouter()
